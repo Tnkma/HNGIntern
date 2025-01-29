@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'api',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'MyInfo.wsgi.application'
 
+
+CORS_ALLOW_METHODS = [
+    'GET',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
