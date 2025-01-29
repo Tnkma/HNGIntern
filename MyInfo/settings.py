@@ -57,7 +57,9 @@ MIDDLEWARE = [
 ]
 
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = True
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://localhost').split(',')
+
+# CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = [
     'GET',
     'POST',
