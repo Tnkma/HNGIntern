@@ -8,9 +8,10 @@ class Info(APIView):
     """ Hardedcoded information about me."""
     def get(self, request):
         """ Returns information about me."""
+        datetime = datetime.utcnow().isoformat(timespec="seconds") + "Z"
         data = {
             "email": "onwusilikenonso@gmail.com",
-            "current_datetime": datetime.now(pytz.utc).replace(microsecond=0).isoformat() + "Z",
+            "current_datetime": datetime,
             "github_url": "https://github.com/Tnkma/HNGIntern"
         }
         return Response(data)
